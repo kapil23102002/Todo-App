@@ -1,131 +1,3 @@
-// import React, { Component } from "react";
-// import { Button, Container, Form, ListGroup, Stack } from "react-bootstrap";
-
-// class TodoApp extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       todos: [],
-//       title: "",
-//       desc: "",
-//     };
-//   }
-
-//   handleTitleChange = (event) => {
-//     this.setState({ title: event.target.value });
-//   };
-
-//   handledescChange = (event) => {
-//     this.setState({ desc: event.target.value });
-//   };
-
-//   addTodo = () => {
-//     const { title, desc } = this.state;
-//     if (title && desc) {
-//       const newTodo = { title, desc, complete: false };
-//       this.setState((prevState) => ({
-//         todos: [...prevState.todos, newTodo],
-//         title: "",
-//         desc: "",
-//       }));
-//     }
-//   };
-
-//   deleteTodo = (index) => {
-//     const updatedTodo = [...this.state.todos];
-//     updatedTodo.splice(index, 1);
-//     this.setState({ todos: updatedTodo });
-//   };
-
-//   updateTodo = (index) => {
-//     const updatedTitle = prompt("Edit Title:", this.state.todos[index].title);
-//     const updateddesc = prompt("Edit desc:", this.state.todos[index].desc);
-
-//     if (updatedTitle !== null && updateddesc !== null) {
-//       const updatedTodo = [...this.state.todos];
-//       updatedTodo[index].title = updatedTitle;
-//       updatedTodo[index].desc = updateddesc;
-//       this.setState({ todos: updatedTodo });
-//     }
-//   };
-
-//   markComplete = (index) => {
-//     const updatedTodo = [...this.state.todos];
-//     updatedTodo[index].complete = true;
-//     this.setState({ todos: updatedTodo });
-//   };
-
-//   render() {
-//     const { todos, title, desc } = this.state;
-
-//     return (
-//       <Container>
-//         <Form>
-//           <Form.Group>
-//             <Form.Label>Title</Form.Label>
-//             <Form.Control
-//               type="text"
-//               value={title}
-//               onChange={this.handleTitleChange}
-//             />
-//           </Form.Group>
-//           <Form.Group>
-//             <Form.Label>desc</Form.Label>
-//             <Form.Control
-//               type="text"
-//               value={desc}
-//               onChange={this.handledescChange}
-//             />
-//           </Form.Group>
-//           <Button variant="primary" onClick={this.addTodo}>
-//             Submit
-//           </Button>
-//         </Form>
-
-//         <ListGroup>
-//           {todos.map((todo, index) => (
-//             <ListGroup.Item key={index}>
-//               <strong>{todo.title}</strong>: {todo.desc}
-//               {!todo.complete && (
-//                 <>
-//                   <Stack direction="horizontal" gap={2}>
-//                     <Button
-//                       variant="outline-danger"
-//                       className="  ms-auto"
-//                       onClick={() => this.deleteTodo(index)}
-//                     >
-//                       Delete
-//                     </Button>
-//                     <Button
-//                       variant="outline-info"
-//                       className=""
-//                       onClick={() => this.updateTodo(index)}
-//                     >
-//                       Update
-//                     </Button>
-//                     <Button
-//                       variant="outline-success"
-//                       className=""
-//                       onClick={() => this.markComplete(index)}
-//                     >
-//                       Mark Complete
-//                     </Button>
-//                   </Stack>
-//                 </>
-//               )}
-//               {todo.complete && (
-//                 <span className="text-success ">Completed</span>
-//               )}
-//             </ListGroup.Item>
-//           ))}
-//         </ListGroup>
-//       </Container>
-//     );
-//   }
-// }
-
-// export default TodoApp;
-
 import React, { Component } from "react";
 import { Container, Form, Button, ListGroup } from "react-bootstrap";
 
@@ -320,6 +192,134 @@ export default TodoApp;
 //         />
 //         <button onClick={this.updateTodo}>Update Todo</button>
 //       </div>
+//     );
+//   }
+// }
+
+// export default TodoApp;
+
+// import React, { Component } from "react";
+// import { Button, Container, Form, ListGroup, Stack } from "react-bootstrap";
+
+// class TodoApp extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       todos: [],
+//       title: "",
+//       desc: "",
+//     };
+//   }
+
+//   handleTitleChange = (event) => {
+//     this.setState({ title: event.target.value });
+//   };
+
+//   handledescChange = (event) => {
+//     this.setState({ desc: event.target.value });
+//   };
+
+//   addTodo = () => {
+//     const { title, desc } = this.state;
+//     if (title && desc) {
+//       const newTodo = { title, desc, complete: false };
+//       this.setState((prevState) => ({
+//         todos: [...prevState.todos, newTodo],
+//         title: "",
+//         desc: "",
+//       }));
+//     }
+//   };
+
+//   deleteTodo = (index) => {
+//     const updatedTodo = [...this.state.todos];
+//     updatedTodo.splice(index, 1);
+//     this.setState({ todos: updatedTodo });
+//   };
+
+//   updateTodo = (index) => {
+//     const updatedTitle = prompt("Edit Title:", this.state.todos[index].title);
+//     const updateddesc = prompt("Edit desc:", this.state.todos[index].desc);
+
+//     if (updatedTitle !== null && updateddesc !== null) {
+//       const updatedTodo = [...this.state.todos];
+//       updatedTodo[index].title = updatedTitle;
+//       updatedTodo[index].desc = updateddesc;
+//       this.setState({ todos: updatedTodo });
+//     }
+//   };
+
+//   markComplete = (index) => {
+//     const updatedTodo = [...this.state.todos];
+//     updatedTodo[index].complete = true;
+//     this.setState({ todos: updatedTodo });
+//   };
+
+//   render() {
+//     const { todos, title, desc } = this.state;
+
+//     return (
+//       <Container>
+//         <Form>
+//           <Form.Group>
+//             <Form.Label>Title</Form.Label>
+//             <Form.Control
+//               type="text"
+//               value={title}
+//               onChange={this.handleTitleChange}
+//             />
+//           </Form.Group>
+//           <Form.Group>
+//             <Form.Label>desc</Form.Label>
+//             <Form.Control
+//               type="text"
+//               value={desc}
+//               onChange={this.handledescChange}
+//             />
+//           </Form.Group>
+//           <Button variant="primary" onClick={this.addTodo}>
+//             Submit
+//           </Button>
+//         </Form>
+
+//         <ListGroup>
+//           {todos.map((todo, index) => (
+//             <ListGroup.Item key={index}>
+//               <strong>{todo.title}</strong>: {todo.desc}
+//               {!todo.complete && (
+//                 <>
+//                   <Stack direction="horizontal" gap={2}>
+//                     <Button
+//                       variant="outline-danger"
+//                       className="  ms-auto"
+//                       onClick={() => this.deleteTodo(index)}
+//                     >
+//                       Delete
+//                     </Button>
+//                     <Button
+//                       variant="outline-info"
+//                       className=""
+//                       onClick={() => this.updateTodo(index)}
+//                     >
+//                       Update
+//                     </Button>
+//                     <Button
+//                       variant="outline-success"
+//                       className=""
+//                       onClick={() => this.markComplete(index)}
+//                     >
+//                       Mark Complete
+//                     </Button>
+//                   </Stack>
+//                 </>
+//               )}
+//               {todo.complete && (
+//                 <span className="text-success ">Completed</span>
+//               )}
+//             </ListGroup.Item>
+//           ))}
+//         </ListGroup>
+//       </Container>
 //     );
 //   }
 // }
